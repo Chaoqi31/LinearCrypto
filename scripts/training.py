@@ -222,7 +222,6 @@ if __name__ == "__main__":
                          logger=logger,
                          callbacks=callbacks,
                          strategy = DDPStrategy(find_unused_parameters=True),
-                         gradient_clip_val=1.0,
                          )
 
     trainer.fit(model, datamodule=data_module)
