@@ -1,0 +1,14 @@
+target: pl_modules.linear_crypto_module.LinearCryptoModule
+params:
+    num_features: 5
+    seq_len: 14
+    pred_len: 1
+    individual: True
+    revin: True
+    revin_affine: True
+    num_heads_temporal: 1
+    num_heads_feature: 1
+    feature_map: 'elu'
+    attention_dropout: 0.0
+    loss: 'rmse'
+normalize: False

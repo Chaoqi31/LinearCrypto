@@ -1,0 +1,16 @@
+additional_features: []
+data_path: ./data/binance_processed.csv
+date_format: '%Y-%m-%d'
+end_date: '2025-12-05'
+jumps: 86400
+root: ./data
+start_date: '2017-08-17'
+test_interval:
+- '2024-12-15'
+- '2025-12-05'
+train_interval:
+- '2017-08-17'
+- '2023-12-15'
+val_interval:
+- '2023-12-15'
+- '2024-12-15'

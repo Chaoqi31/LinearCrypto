@@ -1,0 +1,30 @@
+# Dilated Convolution + CryptoMamba (DCMamba) v1 Configuration
+# Uses multi-scale dilated convolutions before Mamba for temporal feature extraction
+
+target: pl_modules.dcmamba_module.DCMambaModule
+params:
+    # Input/Output dimensions
+    num_features: 6
+    hidden_dims: [14, 16, 32, 1]
+
+    # Dilated Convolution parameters
+    # Receptive fields with kernel_size=3:
+    #   dilation=1: RF=3 (short-term)
+    #   dilation=2: RF=5 (mid-term)
+    #   dilation=4: RF=9 (long-term)
+    dilations: [1, 2, 4]
+    dc_kernel_size: 3
+    dc_fusion: 'concat'  # Options: 'concat', 'add', 'gate'
+    dc_out_channels: null  # null = same as num_features
+
+    # CMamba backbone parameters
+    d_states: 64
+    d_conv: 4
+    layer_density: [4, 1, 1]
+    expand: 2
+    mlp_ratio: 0
+
+    # Training
+    loss: 'rmse'
+
+normalize: False
