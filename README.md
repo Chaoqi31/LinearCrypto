@@ -22,3 +22,11 @@ python scripts/simulate_trade.py \
   --split <train|val|test> \
   --trade_mode <smart|smart_w_short|vanilla|no_strategy> \
 ```
+
+## Acknowledgements
+
+This project is partially based on the open-source project
+[**CryptoMamba**](https://github.com/MShahabSepehri/CryptoMamba).
+
+We adapt and extend the original implementation for the ESE5460 course project.
+
